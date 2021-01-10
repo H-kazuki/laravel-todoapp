@@ -19,6 +19,22 @@
   margin: 10px;
 }
 
+.sort-container {
+  width: 585px;
+  margin: 0 auto;
+}
+
+.sort-container a {
+  padding: 0px 10px;
+  border: solid 1px #3490dc;
+  border-radius: 14px;
+  margin: 0px 5px;
+}
+
+.sort-container p {
+  display: inline-block;
+}
+
 .todo-container {
   width: 585px;
   background-color: #FFF;
@@ -31,7 +47,6 @@
   width: 505px;
   margin: 0;
   display: inline-block;
-  background-color: re;
 }
 
 .priority {
@@ -76,7 +91,7 @@
   text-align: right;
 }
 
-.action-container a{
+.action-container a {
   padding: 0px 5px;
   border: solid 1px #DDDDDD;
 }
@@ -112,6 +127,11 @@
 
 .error {
   color: red;
+}
+
+.paginate {
+  width: 585px;
+  margin: 0 auto;
 }
 /*ここまで*/
 

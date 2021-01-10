@@ -11,9 +11,14 @@ class TodoController extends Controller
 {
 	public function index(Request $request)
 	{
+		$sort = $request->sort;
 		$user_id = Auth::id();
-		$items = Todos::where('user_id', $user_id)->orderBy('priority', 'desc')->get();
-		return view('todo.index', ['items' => $items]);
+		$items = Todos::where('user_id', $user_id)->orderBy($sort, 'desc')->paginate(5);
+		$param = [
+			'items' => $items,
+			'sort' => $sort,
+		];
+		return view('todo.index', $param);
 	}
 
 
