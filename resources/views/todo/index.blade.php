@@ -4,7 +4,7 @@
 
 @section('content')
 	<div class="create-action-container">
-		<a href="todo/create" style="text-decoration:none;">Create</a>
+		<a href="todo/create" style="text-decoration:none;">新規作成</a>
 	</div>
 	<div class="sort-container">
 		<p>並べ替え：</p>
@@ -19,8 +19,8 @@
 			<pre class="todo-content">{{$item->content}}</pre>
 		@endif
 		<div class="edit delete action-container">
-			<a href="todo/edit?id={{$item->id}}" style="text-decoration:none;">Edit</a>
-			<a href="todo/del?id={{$item->id}}" style="text-decoration:none;">Delete</a>
+			<a href="todo/edit?id={{$item->id}}" style="text-decoration:none;">更新</a>
+			<a href="todo/del?id={{$item->id}}" style="text-decoration:none;">削除</a>
 		</div>
 	</div>
 	@endforeach
