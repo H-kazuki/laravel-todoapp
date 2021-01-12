@@ -1,5 +1,5 @@
 # 名称
-## TodoApp
+TodoApp
 
 # 概要
 基本的にCRUD機能を備えたToDoアプリ。  
