@@ -7,6 +7,7 @@
 		<form action="/todo/create" method="post">
 			@csrf
 			<input type="hidden" name="user_id" value="{{$user_id}}">
+			<input type="hidden" name="completion" value="0">
 			<h2>タイトル:</h2>
 			@error('title')
 				<p class="error">{{$message}}</p>
