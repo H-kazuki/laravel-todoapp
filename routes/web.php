@@ -22,6 +22,8 @@ Route::get('todo/edit', 'TodoController@edit')->middleware('auth');
 Route::post('todo/edit', 'TodoController@update')->middleware('auth');
 Route::get('todo/del', 'TodoController@delete')->middleware('auth');
 Route::post('todo/del', 'TodoController@remove')->middleware('auth');
-Auth::routes();
+Route::get('todo/completion', 'TodoController@completion')->middleware('auth')->middleware('sort');
 
+
+Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');

@@ -12,16 +12,20 @@
   width: 100%;
 }
 
-.create-action-container,
+.action-container,
 .delete-message {
   font-size: 30px;
   text-align: center;
   margin: 10px;
 }
 
+.action-container a{
+  margin: 0 30px;
+}
+
 .sort-container {
   width: 585px;
-  margin: 0 auto;
+  margin: 10px auto;
 }
 
 .sort-container a {
@@ -87,11 +91,11 @@
   margin: 0 0 15px 0;
 }
 
-.action-container {
+.edit-delete-container {
   text-align: right;
 }
 
-.action-container a {
+.edit-delete-container a {
   padding: 0px 5px;
   border: solid 1px #DDDDDD;
 }
@@ -132,6 +136,10 @@
 .paginate {
   width: 585px;
   margin: 0 auto;
+}
+
+.completion-checkbox {
+  margin: 10px;
 }
 /*ここまで*/
 

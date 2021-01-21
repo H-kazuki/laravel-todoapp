@@ -1,0 +1,9 @@
+diff a/public/.htaccess b/public/.htaccess	(rejected hunks)
+@@ -4,6 +4,7 @@
+     </IfModule>
+ 
+     RewriteEngine On
++    RewriteBase /
+ 
+     # Handle Authorization Header
+     RewriteCond %{HTTP:Authorization} .

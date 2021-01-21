@@ -13,7 +13,7 @@ class TodoController extends Controller
 	{
 		$sort = $request->sort;
 		$user_id = Auth::id();
-		$items = Todos::where('user_id', $user_id)->orderBy($sort, 'desc')->paginate(5);
+		$items = Todos::where('user_id', $user_id)->where('completion', 0)->orderBy($sort, 'desc')->paginate(5);
 		$param = [
 			'items' => $items,
 			'sort' => $sort,
@@ -68,5 +68,18 @@ class TodoController extends Controller
 		$todo = Todos::find($request->id);
 		$todo->delete();
 		return redirect('/todo');
+	}
+
+
+	public function completion(Request $request)
+	{
+		$sort = $request->sort;
+		$user_id = Auth::id();
+		$items = Todos::where('user_id', $user_id)->orderBy($sort, 'desc')->get();
+		$param = [
+			'items' => $items,
+			'sort' => $sort,
+		];
+		return view('todo.completion', $param);
 	}
 }
