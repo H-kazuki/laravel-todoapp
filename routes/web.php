@@ -23,6 +23,7 @@ Route::post('todo/edit', 'TodoController@update')->middleware('auth');
 Route::get('todo/del', 'TodoController@delete')->middleware('auth');
 Route::post('todo/del', 'TodoController@remove')->middleware('auth');
 Route::get('todo/completion', 'TodoController@completion')->middleware('auth')->middleware('sort');
+Route::post('todo/completion', 'TodoController@clear')->middleware('auth');
 
 
 Auth::routes();

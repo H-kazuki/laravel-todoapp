@@ -8,10 +8,11 @@
 	</div>
 	<div class="sort-container">
 		<p>並べ替え：</p>
-		<a href="/todo?sort=priority" style="text-decoration:none;">優先度</a>
-		<a href="/todo?sort=id" style="text-decoration:none;">作成日時</a>
+		<a href="/todo/completion?sort=priority" style="text-decoration:none;">優先度</a>
+		<a href="/todo/completion?sort=id" style="text-decoration:none;">作成日時</a>
 	</div>
-		<form>
+		<form ction="/todo/completion" method="post">
+			@csrf
 			@foreach($items as $item)
 				@if($item->completion == 1)
 					<div class="todo-container">
@@ -21,11 +22,13 @@
 							<pre class="todo-content">{{$item->content}}</pre>
 						@endif
 						<div class="edit-delete-container">
-							<!--<a href="todo/edit?id={{$item->id}}" style="text-decoration:none;">更新</a>
-							<a href="todo/del?id={{$item->id}}" style="text-decoration:none;">削除</a>-->
+							<input class="clear_checkbox" type="checkbox" name="clear[]" value="{{$item->id}}" style="transform:scale(1.5);">
 						</div>
 					</div>
 				@endif
 			@endforeach
+			<div class="button-container">
+				<input class="button" type="submit" value="クリア">
+			</div>
 		</form>
 @endsection

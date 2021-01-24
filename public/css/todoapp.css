@@ -20,7 +20,7 @@
 }
 
 .action-container a{
-  margin: 0 30px;
+  margin: 0 40px;
 }
 
 .sort-container {
@@ -141,6 +141,7 @@
 .completion-checkbox {
   margin: 10px;
 }
+
 /*ここまで*/
 
 :root {

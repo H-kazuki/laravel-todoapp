@@ -35,7 +35,7 @@ class TodoController extends Controller
 		$form = $request->all();
 		unset($form['_token']);
 		$todo->fill($form)->save();
-		return redirect('/todo');
+		return redirect('todo');
 	}
 
 
@@ -81,5 +81,16 @@ class TodoController extends Controller
 			'sort' => $sort,
 		];
 		return view('todo.completion', $param);
+	}
+
+	public function clear(Request $request)
+	{
+		$clear_id_list = $request->clear;
+		foreach($clear_id_list as $id)
+		{
+			$todo = Todos::find($id);
+			$todo->delete();
+		}
+		return redirect('/todo/completion');
 	}
 }
