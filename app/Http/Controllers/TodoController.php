@@ -21,6 +21,17 @@ class TodoController extends Controller
 		return view('todo.index', $param);
 	}
 
+	public function indexCompletion(Request $request)
+	{
+		$completion_id_list = $request->completion;
+		foreach($completion_id_list as $id)
+		{
+			$todo = Todos::find($id);
+			$todo->update(['completion' => 1]);
+		}
+		return redirect('/todo');
+	}
+
 
 	public function create(Request $request)
 	{

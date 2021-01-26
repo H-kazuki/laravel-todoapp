@@ -28,7 +28,6 @@
 			<p><input type="radio" name="priority" value="0" {{$form->getChoicePriority(0)}}>普通</p>
 			<p><input type="radio" name="priority" value="1" {{$form->getChoicePriority(1)}}>優先</p>
 			<p><input type="radio" name="priority" value="2" {{$form->getChoicePriority(2)}}>最優先</p>
-			<h5>完了<input type="checkbox" class="completion-checkbox" name="completion" value="1"></h5>
 			<div class="button-container">
 				<input class="button" type="submit" value="OK">
 			</div>

@@ -98,6 +98,7 @@
 .edit-delete-container a {
   padding: 0px 5px;
   border: solid 1px #DDDDDD;
+  margin-right: 5px;
 }
 
 .button-container {
@@ -105,7 +106,7 @@
 }
 
 .button {
-  width: 100px;
+  width: 130px;
   color: #FFF;
   font-size: 20px;
   background-color: #3490dc;
